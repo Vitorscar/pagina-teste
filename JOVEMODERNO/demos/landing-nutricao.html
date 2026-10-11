@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dra. Helena Marques · Nutricionista — DEMO</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Demonstração pública de landing page premium para nutricionista. Todos os dados e imagens são fictícios.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="icon" href="../assets/icone.png" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* =========================================================
+   TOKENS
+   ========================================================= */
+:root{
+  --gold:#C9A84C;
+  --gold-l:#E5D5A5;
+  --gold-d:#A68A3C;
+  --gold-grad:linear-gradient(135deg,#C9A84C 0%,#E5D5A5 50%,#C9A84C 100%);
+  --gold-glow:0 0 40px rgba(201,168,76,.35);
+
+  --bg:#0A0A0A;
+  --bg2:#141414;
+  --bg3:#1E1E1E;
+  --card:#161616;
+  --line:rgba(201,168,76,.12);
+  --line-2:rgba(201,168,76,.25);
+
+  --tx:#FFFFFF;
+  --tx2:#F5F5F5;
+  --mut:#B0B0B0;
+  --mut2:#808080;
+
+  --r:14px;
+  --r-lg:24px;
+  --r-pill:999px;
+
+  --demo-h:38px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(80px + var(--demo-h))}
+body{
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--tx2);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:700;line-height:1.15}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+/* =========================================================
+   BANNER DEMO
+   ========================================================= */
+.demo-banner{
+  position:fixed; top:0; left:0; right:0;
+  height:var(--demo-h);
+  z-index:200;
+  background:linear-gradient(90deg,#1a1408,#2a1f0a,#1a1408);
+  border-bottom:1px solid var(--line-2);
+  display:flex; align-items:center; justify-content:center;
+  gap:16px;
+  font:700 .78rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--gold-l);
+  padding:0 16px;
+  box-shadow:0 4px 20px rgba(0,0,0,.5);
+}
+.demo-banner strong{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-size:.7rem;
+}
+.demo-banner a{
+  color:var(--gold);
+  border-bottom:1px solid transparent;
+  transition:border-color .2s;
+}
+.demo-banner a:hover{border-color:var(--gold)}
+.demo-banner button{
+  position:absolute; right:12px; top:50%; transform:translateY(-50%);
+  color:var(--gold-l); opacity:.6;
+  width:24px; height:24px; border-radius:50%;
+  display:grid; place-items:center;
+}
+.demo-banner button:hover{opacity:1;background:rgba(201,168,76,.1)}
+@media(max-width:640px){
+  .demo-banner{gap:8px; font-size:.68rem; padding:0 44px 0 12px}
+  .demo-banner span:not(.keep){display:none}
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+header{
+  position:fixed; top:var(--demo-h); left:0; right:0;
+  z-index:100;
+  background:rgba(10,10,10,.85);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--line);
+  transition:background .3s, box-shadow .3s;
+}
+header.scrolled{
+  background:rgba(10,10,10,.96);
+  box-shadow:0 8px 30px rgba(0,0,0,.5);
+}
+nav{
+  max-width:1200px; margin:0 auto;
+  padding:1rem 2rem;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.logo{display:flex; align-items:center; gap:1rem}
+.logo-mark{
+  width:46px; height:46px; border-radius:50%;
+  background:var(--gold-grad);
+  display:grid; place-items:center;
+  color:#0A0A0A;
+  font:800 1.1rem 'Playfair Display',serif;
+  box-shadow:var(--gold-glow);
+}
+.logo-text{display:flex; flex-direction:column; gap:1px}
+.logo-name{
+  font:700 1.05rem 'Playfair Display',serif;
+  color:var(--tx); letter-spacing:.08em;
+}
+.logo-title{
+  font:700 .62rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--gold);
+  letter-spacing:.35em;
+  text-transform:uppercase;
+}
+.nav-links{
+  display:flex; gap:2rem; list-style:none; align-items:center;
+}
+.nav-links a{
+  font:600 .78rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  position:relative;
+  padding:4px 0;
+  transition:color .2s;
+}
+.nav-links a:not(.btn-nav)::after{
+  content:""; position:absolute;
+  left:0; right:0; bottom:-2px; height:1px;
+  background:var(--gold);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform .3s;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.btn-nav{
+  background:var(--gold-grad);
+  color:#0A0A0A !important;
+  padding:.6rem 1.2rem;
+  border-radius:var(--r-pill);
+  font-weight:800 !important;
+  font-size:.72rem !important;
+  box-shadow:0 6px 20px rgba(201,168,76,.35);
+  white-space:nowrap;
+  transition:transform .2s, box-shadow .3s;
+}
+.btn-nav:hover{transform:translateY(-2px); box-shadow:0 0 32px rgba(201,168,76,.5)}
+.burger{
+  display:none;
+  width:44px; height:44px;
+  border:1px solid var(--line-2);
+  border-radius:10px;
+  color:var(--gold);
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+}
+.burger span{
+  display:block; width:20px; height:1.5px;
+  background:currentColor;
+  transition:transform .25s, opacity .25s;
+}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  padding:calc(80px + var(--demo-h) + 60px) 2rem 80px;
+  min-height:100vh;
+  display:flex; align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:""; position:absolute;
+  top:-30%; right:-15%;
+  width:800px; height:800px;
+  background:radial-gradient(circle,rgba(201,168,76,.1),transparent 62%);
+  animation:pulse 8s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1);opacity:.6}
+  50%{transform:scale(1.08);opacity:.9}
+}
+.hero-container{
+  max-width:1200px; width:100%;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:60px; align-items:center;
+  position:relative; z-index:1;
+}
+.hero-badge{
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:rgba(201,168,76,.08);
+  border:1px solid rgba(201,168,76,.3);
+  color:var(--gold);
+  padding:.5rem 1rem;
+  border-radius:var(--r-pill);
+  font:700 .76rem 'Plus Jakarta Sans',sans-serif;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin-bottom:1.5rem;
+  animation:up .8s ease both;
+}
+.hero h1{
+  font-size:clamp(2.2rem,5.5vw,3.6rem);
+  margin-bottom:1.5rem;
+  animation:up .8s .05s ease both;
+}
+.hero h1 em{
+  font-style:normal;
+  background:var(--gold-grad);
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent;
+}
+.hero p.lead{
+  font-size:1.15rem;
+  color:var(--mut);
+  margin-bottom:2.2rem;
+  line-height:1.75;
+  max-width:520px;
+  animation:up .8s .1s ease both;
+}
+.hero-stats{
+  display:flex; gap:2.5rem;
+  margin-bottom:2.4rem;
+  animation:up .8s .15s ease both;
+}
+.hero-stat{display:flex;flex-direction:column}
+.hero-stat b{
+  font:800 1.9rem 'Playfair Display',serif;
+  color:var(--gold);
+  line-height:1;
+}
+.hero-stat span{
+  font:600 .78rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut2);
+  margin-top:4px;
+}
+.hero-cta{
+  display:flex; gap:14px; flex-wrap:wrap;
+  animation:up .8s .2s ease both;
+}
+.btn{
+  display:inline-flex; align-items:center; gap:.6rem;
+  padding:1rem 1.8rem;
+  border-radius:var(--r-pill);
+  font:800 .9rem 'Plus Jakarta Sans',sans-serif;
+  letter-spacing:.02em;
+  transition:transform .2s, box-shadow .3s, background .3s;
+  cursor:pointer;
+  border:0;
+}
+.btn-gold{
+  background:var(--gold-grad);
+  color:#0A0A0A;
+  box-shadow:0 10px 30px rgba(201,168,76,.35);
+}
+.btn-gold:hover{transform:translateY(-3px); box-shadow:0 16px 40px rgba(201,168,76,.5)}
+.btn-outline{
+  background:transparent;
+  color:var(--gold);
+  border:1.5px solid rgba(201,168,76,.5);
+}
+.btn-outline:hover{background:rgba(201,168,76,.08); transform:translateY(-3px)}
+
+/* Placeholder da imagem */
+.ph-hero{
+  aspect-ratio:4/5;
+  border-radius:var(--r-lg);
+  background:
+    radial-gradient(circle at 30% 30%, rgba(201,168,76,.15), transparent 55%),
+    linear-gradient(160deg,#1a1408,#0A0A0A 70%);
+  border:1px solid var(--line-2);
+  box-shadow:var(--gold-glow), 0 30px 80px rgba(0,0,0,.6);
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:14px;
+  position:relative; overflow:hidden;
+}
+.ph-hero::before{
+  content:""; position:absolute; inset:0;
+  background:
+    repeating-linear-gradient(45deg, transparent 0 18px, rgba(201,168,76,.03) 18px 19px);
+}
+.ph-hero i{
+  font-size:3.6rem;
+  color:var(--gold);
+  opacity:.7;
+  position:relative;
+}
+.ph-hero span{
+  font:700 .72rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut2);
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  position:relative;
+}
+.ph-hero small{
+  position:absolute;
+  bottom:16px;
+  font:600 .68rem 'JetBrains Mono',monospace;
+  color:var(--mut2);
+  letter-spacing:.05em;
+}
+
+@keyframes up{
+  from{opacity:0;transform:translateY(24px)}
+  to{opacity:1;transform:none}
+}
+
+/* =========================================================
+   SIMULADOR
+   ========================================================= */
+.sim-sec{
+  padding:96px 2rem;
+  background:var(--bg2);
+  position:relative;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.sim-sec::before{
+  content:""; position:absolute; inset:0;
+  background:
+    radial-gradient(circle at 15% 40%, rgba(201,168,76,.05), transparent 50%),
+    radial-gradient(circle at 85% 60%, rgba(201,168,76,.03), transparent 50%);
+  pointer-events:none;
+}
+.sim-wrap{max-width:1000px;margin:0 auto;position:relative;z-index:1}
+.sec-head{text-align:center;margin-bottom:3rem}
+.sec-head h2{
+  font-size:clamp(1.8rem,4vw,2.5rem);
+  color:var(--tx);
+  margin-bottom:1rem;
+}
+.sec-head h2 em{
+  font-style:normal;
+  background:var(--gold-grad);
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent;
+}
+.sec-head p{
+  color:var(--mut);
+  max-width:600px;
+  margin:0 auto;
+  font-size:1.05rem;
+}
+
+.sim-box{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:2.5rem;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+.steps{
+  display:flex; justify-content:center; gap:1rem;
+  margin-bottom:2.5rem;
+  flex-wrap:wrap;
+}
+.step{
+  display:flex; align-items:center; gap:.6rem;
+  font:700 .78rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut2);
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  transition:color .3s;
+}
+.step b{
+  width:32px; height:32px;
+  border-radius:50%;
+  background:rgba(201,168,76,.08);
+  border:1px solid var(--line-2);
+  display:grid; place-items:center;
+  font:800 .82rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut);
+  transition:all .3s;
+}
+.step.on{color:var(--gold)}
+.step.on b{
+  background:var(--gold-grad);
+  border-color:transparent;
+  color:#0A0A0A;
+}
+
+.sim-form{display:grid; gap:1.4rem}
+.row{display:grid; grid-template-columns:repeat(3,1fr); gap:1rem}
+.field{display:flex; flex-direction:column; gap:.5rem}
+.field.full{grid-column:1/-1}
+.field label{
+  font:700 .82rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut);
+  letter-spacing:.02em;
+}
+.field input,
+.field select{
+  padding:1rem 1.1rem;
+  background:rgba(10,10,10,.6);
+  border:1.5px solid var(--line);
+  border-radius:var(--r);
+  color:var(--tx);
+  font:400 1rem 'Plus Jakarta Sans',sans-serif;
+  transition:border-color .2s, background .2s, box-shadow .2s;
+}
+.field input:focus,
+.field select:focus{
+  outline:none;
+  border-color:var(--gold);
+  background:rgba(201,168,76,.04);
+  box-shadow:0 0 0 4px rgba(201,168,76,.08);
+}
+.field input::placeholder{color:#4a4a4a}
+
+.radios{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:.8rem}
+.radio{
+  position:relative;
+}
+.radio input{
+  position:absolute; opacity:0; pointer-events:none;
+}
+.radio label{
+  display:flex; flex-direction:column; align-items:center; gap:.5rem;
+  padding:1.2rem 1rem;
+  background:rgba(201,168,76,.02);
+  border:1.5px solid var(--line);
+  border-radius:var(--r);
+  cursor:pointer;
+  transition:all .25s;
+  text-align:center;
+  color:var(--mut);
+}
+.radio label:hover{
+  background:rgba(201,168,76,.06);
+  border-color:var(--line-2);
+}
+.radio input:checked + label{
+  border-color:var(--gold);
+  background:rgba(201,168,76,.1);
+  color:var(--gold);
+  box-shadow:0 0 24px rgba(201,168,76,.15);
+}
+.radio i{font-size:1.3rem; color:var(--mut2); transition:color .25s}
+.radio input:checked + label i{color:var(--gold)}
+.radio label b{font:700 .85rem 'Plus Jakarta Sans',sans-serif; color:inherit}
+.radio label small{
+  font:500 .7rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut2);
+  line-height:1.35;
+}
+.radio input:checked + label small{color:rgba(229,213,165,.8)}
+
+.btn-sim{
+  width:100%;
+  padding:1.2rem;
+  margin-top:.5rem;
+  background:var(--gold-grad);
+  color:#0A0A0A;
+  border:0;
+  border-radius:var(--r);
+  font:800 1.05rem 'Plus Jakarta Sans',sans-serif;
+  letter-spacing:.05em;
+  cursor:pointer;
+  display:flex; align-items:center; justify-content:center; gap:.6rem;
+  transition:transform .2s, box-shadow .3s;
+}
+.btn-sim:hover{transform:translateY(-2px); box-shadow:0 14px 40px rgba(201,168,76,.4)}
+.btn-sim:disabled{opacity:.7; cursor:wait}
+
+/* Resultado */
+.sim-result{display:none; margin-top:2rem}
+.sim-result.show{display:block; animation:up .7s ease both}
+
+.result-grid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:1rem;
+  margin-bottom:2rem;
+}
+.result{
+  background:rgba(201,168,76,.04);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:1.5rem 1rem;
+  text-align:center;
+  transition:transform .25s, border-color .25s, box-shadow .25s;
+}
+.result:hover{
+  transform:translateY(-4px);
+  border-color:var(--line-2);
+  box-shadow:0 12px 30px rgba(201,168,76,.12);
+}
+.result.hl{
+  background:var(--gold-grad);
+  border-color:transparent;
+  color:#0A0A0A;
+  box-shadow:0 12px 30px rgba(201,168,76,.3);
+}
+.result i{
+  font-size:1.3rem;
+  color:var(--gold);
+  margin-bottom:.6rem;
+  display:block;
+}
+.result.hl i{color:#0A0A0A}
+.result b{
+  display:block;
+  font:800 1.8rem 'Playfair Display',serif;
+  margin-bottom:.2rem;
+  line-height:1;
+}
+.result.hl b{color:#0A0A0A}
+.result span{
+  font:600 .78rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut2);
+}
+.result.hl span{color:rgba(10,10,10,.7)}
+
+.macros{
+  background:rgba(201,168,76,.03);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:1.8rem;
+  margin-bottom:1.8rem;
+}
+.macros h4{
+  font:700 1.1rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--tx);
+  text-align:center;
+  margin-bottom:1.4rem;
+}
+.macro-row{
+  display:flex; align-items:center; gap:1rem;
+  margin-bottom:1rem;
+}
+.macro-row:last-child{margin-bottom:0}
+.macro-lbl{
+  width:110px;
+  font:700 .82rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut);
+}
+.macro-bar{
+  flex:1; height:32px;
+  background:rgba(201,168,76,.05);
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  position:relative;
+}
+.macro-fill{
+  height:100%;
+  border-radius:16px;
+  display:flex; align-items:center; justify-content:flex-end;
+  padding-right:.8rem;
+  font:800 .78rem 'Plus Jakarta Sans',sans-serif;
+  color:#0A0A0A;
+  width:0;
+  transition:width 1.2s cubic-bezier(.2,.8,.2,1);
+}
+.macro-fill.p{background:var(--gold-grad)}
+.macro-fill.c{background:linear-gradient(90deg,#A68A3C,#E5D5A5)}
+.macro-fill.f{background:linear-gradient(90deg,#7A6628,#C9A84C)}
+
+.timeline-box{
+  background:rgba(201,168,76,.03);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  padding:1.8rem;
+  margin-bottom:1.8rem;
+}
+.timeline-box h4{
+  font:700 1.1rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--tx);
+  text-align:center;
+  margin-bottom:1.6rem;
+}
+.tl{
+  display:flex; justify-content:space-between;
+  position:relative;
+  padding:0 .5rem;
+}
+.tl::before{
+  content:""; position:absolute;
+  top:22px; left:5%; right:5%;
+  height:2px;
+  background:rgba(201,168,76,.12);
+}
+.tl-prog{
+  position:absolute;
+  top:22px; left:5%;
+  height:2px;
+  background:var(--gold-grad);
+  width:0;
+  transition:width 1.6s ease;
+  z-index:1;
+}
+.tl-point{
+  display:flex; flex-direction:column; align-items:center; gap:.6rem;
+  position:relative; z-index:2;
+  flex:1;
+}
+.tl-dot{
+  width:44px; height:44px;
+  border-radius:50%;
+  background:var(--bg);
+  border:2px solid var(--line-2);
+  display:grid; place-items:center;
+  font:800 .9rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut2);
+  transition:all .4s;
+}
+.tl-point.on .tl-dot{
+  background:var(--gold-grad);
+  border-color:transparent;
+  color:#0A0A0A;
+  transform:scale(1.1);
+  box-shadow:var(--gold-glow);
+}
+.tl-lbl{
+  font:600 .72rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut2);
+  text-align:center;
+  line-height:1.3;
+}
+.tl-point.on .tl-lbl{color:var(--gold)}
+
+.cta-result{
+  text-align:center;
+  margin-top:2rem;
+  padding-top:2rem;
+  border-top:1px solid var(--line);
+}
+.btn-cta{
+  display:inline-flex; align-items:center; gap:.7rem;
+  padding:1.2rem 2.5rem;
+  background:var(--gold-grad);
+  color:#0A0A0A;
+  border-radius:var(--r-pill);
+  font:800 1rem 'Plus Jakarta Sans',sans-serif;
+  box-shadow:0 12px 30px rgba(201,168,76,.35);
+  transition:transform .2s, box-shadow .3s;
+}
+.btn-cta:hover{transform:translateY(-3px); box-shadow:0 18px 40px rgba(201,168,76,.5)}
+.cta-note{
+  font:500 .78rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut2);
+  margin-top:1rem;
+}
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+.features{padding:96px 2rem; position:relative}
+.features::before{
+  content:""; position:absolute;
+  top:0; left:10%; right:10%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  opacity:.3;
+}
+.feat-grid{
+  max-width:1200px; margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+.feat{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:2.2rem;
+  transition:transform .3s, border-color .3s, box-shadow .3s;
+  position:relative;
+  overflow:hidden;
+}
+.feat::before{
+  content:""; position:absolute;
+  top:0; left:0; right:0; height:3px;
+  background:var(--gold-grad);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform .4s;
+}
+.feat:hover{
+  transform:translateY(-6px);
+  border-color:var(--line-2);
+  box-shadow:0 20px 50px rgba(201,168,76,.12);
+}
+.feat:hover::before{transform:scaleX(1)}
+.feat i{
+  width:56px; height:56px;
+  background:rgba(201,168,76,.08);
+  border:1px solid var(--line-2);
+  border-radius:var(--r);
+  display:grid; place-items:center;
+  font-size:1.3rem;
+  color:var(--gold);
+  margin-bottom:1.4rem;
+}
+.feat h3{
+  font:700 1.15rem 'Playfair Display',serif;
+  color:var(--tx);
+  margin-bottom:.8rem;
+}
+.feat p{color:var(--mut); font-size:.95rem; line-height:1.7}
+
+/* =========================================================
+   TRANSFORMAÇÕES
+   ========================================================= */
+.transf{
+  padding:96px 2rem;
+  background:var(--bg2);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.transf-grid{
+  max-width:1000px; margin:0 auto;
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:2rem;
+}
+.transf-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  overflow:hidden;
+  transition:transform .3s, border-color .3s, box-shadow .3s;
+}
+.transf-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--line-2);
+  box-shadow:0 20px 50px rgba(201,168,76,.12);
+}
+.transf-ph{
+  aspect-ratio:16/10;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  position:relative;
+  border-bottom:1px solid var(--line);
+}
+.transf-ph .half{
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:8px;
+  position:relative;
+}
+.transf-ph .half.before{
+  background:linear-gradient(160deg,#1a1a1a,#0A0A0A);
+}
+.transf-ph .half.after{
+  background:linear-gradient(160deg,#2a1f0a,#0A0A0A);
+}
+.transf-ph .half i{
+  font-size:1.6rem;
+  color:var(--mut2);
+  opacity:.5;
+}
+.transf-ph .half.after i{color:var(--gold); opacity:.9}
+.transf-ph .half span{
+  font:700 .68rem 'Plus Jakarta Sans',sans-serif;
+  letter-spacing:.2em;
+  color:var(--mut2);
+  text-transform:uppercase;
+}
+.transf-ph .half.after span{color:var(--gold)}
+.transf-ph::after{
+  content:""; position:absolute;
+  top:0; bottom:0; left:50%;
+  width:1px;
+  background:linear-gradient(180deg,transparent,var(--gold),transparent);
+}
+.transf-body{padding:1.6rem}
+.transf-body h4{
+  font:700 1.1rem 'Playfair Display',serif;
+  color:var(--tx);
+  margin-bottom:.5rem;
+}
+.transf-body p{color:var(--mut); font-size:.9rem; margin-bottom:1rem}
+.transf-result{
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:rgba(201,168,76,.1);
+  border:1px solid var(--line-2);
+  color:var(--gold);
+  padding:.5rem 1rem;
+  border-radius:var(--r-pill);
+  font:800 .78rem 'Plus Jakarta Sans',sans-serif;
+}
+
+/* =========================================================
+   DEPOIMENTOS
+   ========================================================= */
+.testi{padding:96px 2rem}
+.testi-grid{
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
+.testi-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:2rem;
+  position:relative;
+  transition:transform .3s, border-color .3s;
+}
+.testi-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--line-2);
+}
+.testi-card::before{
+  content:'"';
+  position:absolute;
+  top:1rem; right:1.5rem;
+  font:400 4rem 'Playfair Display',serif;
+  color:rgba(201,168,76,.12);
+  line-height:1;
+}
+.testi-head{display:flex; align-items:center; gap:1rem; margin-bottom:1.4rem}
+.testi-avatar{
+  width:56px; height:56px;
+  border-radius:50%;
+  background:var(--gold-grad);
+  display:grid; place-items:center;
+  font:800 1.1rem 'Plus Jakarta Sans',sans-serif;
+  color:#0A0A0A;
+  flex-shrink:0;
+}
+.testi-info h4{
+  font:700 1rem 'Playfair Display',serif;
+  color:var(--tx);
+  margin-bottom:.15rem;
+}
+.testi-info span{
+  font:500 .8rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--mut2);
+}
+.testi-text{
+  font-style:italic;
+  color:var(--mut);
+  line-height:1.75;
+  font-size:.94rem;
+}
+.testi-result{
+  margin-top:1.4rem;
+  padding-top:1.4rem;
+  border-top:1px solid var(--line);
+  display:flex; align-items:center; gap:.5rem;
+  color:var(--gold);
+  font:800 .88rem 'Plus Jakarta Sans',sans-serif;
+}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq{
+  padding:96px 2rem;
+  background:var(--bg2);
+  border-top:1px solid var(--line);
+}
+.faq-wrap{max-width:800px; margin:0 auto}
+.faq-item{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r);
+  margin-bottom:.8rem;
+  overflow:hidden;
+  transition:border-color .3s;
+}
+.faq-item:hover{border-color:var(--line-2)}
+.faq-item.on{border-color:var(--gold); box-shadow:var(--gold-glow)}
+.faq-q{
+  width:100%;
+  padding:1.4rem 1.6rem;
+  display:flex; justify-content:space-between; align-items:center;
+  gap:1rem;
+  text-align:left;
+  font:700 1rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--tx);
+  transition:color .2s;
+}
+.faq-q:hover{color:var(--gold)}
+.faq-item.on .faq-q{color:var(--gold)}
+.faq-ic{
+  width:32px; height:32px;
+  background:rgba(201,168,76,.08);
+  border-radius:50%;
+  display:grid; place-items:center;
+  color:var(--gold);
+  font-size:.82rem;
+  transition:transform .3s, background .3s, color .3s;
+  flex-shrink:0;
+}
+.faq-item.on .faq-ic{
+  background:var(--gold-grad);
+  color:#0A0A0A;
+  transform:rotate(180deg);
+}
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .35s ease, padding .3s ease;
+  color:var(--mut);
+  line-height:1.75;
+  padding:0 1.6rem;
+}
+.faq-item.on .faq-a{
+  max-height:400px;
+  padding:0 1.6rem 1.5rem;
+}
+
+/* =========================================================
+   CTA FINAL
+   ========================================================= */
+.cta-final{
+  padding:96px 2rem;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.cta-final::before{
+  content:""; position:absolute;
+  inset:-50%;
+  background:radial-gradient(circle,rgba(201,168,76,.08),transparent 60%);
+  animation:spin 20s linear infinite;
+  pointer-events:none;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cta-final > *{position:relative; z-index:1}
+.cta-final h2{
+  font-size:clamp(2rem,5vw,3rem);
+  color:var(--tx);
+  margin-bottom:1rem;
+}
+.cta-final h2 em{
+  font-style:normal;
+  background:var(--gold-grad);
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent;
+}
+.cta-final p{
+  color:var(--mut);
+  font-size:1.1rem;
+  max-width:560px;
+  margin:0 auto 2.5rem;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer{
+  background:#060606;
+  border-top:1px solid var(--line);
+  padding:3.5rem 2rem 2rem;
+}
+.foot-grid{
+  max-width:1200px; margin:0 auto;
+  display:grid; grid-template-columns:2fr 1fr 1fr 1fr;
+  gap:2.5rem;
+  margin-bottom:2.5rem;
+}
+.foot-brand p{
+  color:var(--mut2);
+  font-size:.92rem;
+  line-height:1.75;
+  margin:1rem 0 1.2rem;
+}
+.socials{display:flex; gap:.7rem}
+.socials a{
+  width:40px; height:40px;
+  border-radius:50%;
+  background:rgba(201,168,76,.08);
+  border:1px solid var(--line-2);
+  display:grid; place-items:center;
+  color:var(--gold);
+  transition:transform .2s, background .3s, color .3s;
+}
+.socials a:hover{
+  transform:translateY(-3px);
+  background:var(--gold-grad);
+  color:#0A0A0A;
+  border-color:transparent;
+}
+.foot-col h4{
+  font:800 .72rem 'Plus Jakarta Sans',sans-serif;
+  color:var(--gold);
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  margin-bottom:1.2rem;
+}
+.foot-col ul{list-style:none; display:grid; gap:.7rem}
+.foot-col a{
+  color:var(--mut2);
+  font-size:.9rem;
+  transition:color .2s;
+}
+.foot-col a:hover{color:var(--gold)}
+.foot-col li{color:var(--mut2); font-size:.9rem}
+.foot-bottom{
+  max-width:1200px; margin:0 auto;
+  padding-top:2rem;
+  border-top:1px solid var(--line);
+  text-align:center;
+  color:var(--mut2);
+  font-size:.82rem;
+}
+.foot-bottom a{color:var(--gold)}
+
+/* =========================================================
+   TOAST
+   ========================================================= */
+.toast-wrap{
+  position:fixed;
+  bottom:24px; left:50%;
+  transform:translateX(-50%);
+  z-index:300;
+  display:flex; flex-direction:column; gap:8px;
+  pointer-events:none;
+}
+.toast{
+  background:rgba(20,20,20,.98);
+  border:1px solid var(--line-2);
+  border-radius:12px;
+  padding:14px 20px;
+  color:var(--tx);
+  font:600 .88rem 'Plus Jakarta Sans',sans-serif;
+  box-shadow:0 20px 50px rgba(0,0,0,.6);
+  display:flex; align-items:center; gap:10px;
+  max-width:380px;
+  pointer-events:auto;
+  animation:toastIn .3s ease;
+}
+.toast i{color:var(--gold)}
+@keyframes toastIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:none}
+}
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+@media (max-width:1024px){
+  .hero-container{grid-template-columns:1fr; text-align:center; gap:40px}
+  .hero p.lead{margin-left:auto; margin-right:auto}
+  .hero-stats{justify-content:center}
+  .hero-cta{justify-content:center}
+  .ph-hero{max-width:420px; margin:0 auto; order:-1}
+  .feat-grid{grid-template-columns:repeat(2,1fr)}
+  .transf-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:repeat(2,1fr)}
+  .foot-grid{grid-template-columns:repeat(2,1fr)}
+  .row{grid-template-columns:1fr}
+}
+
+@media (max-width:720px){
+  .burger{display:flex}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:100%; left:0; right:0;
+    background:rgba(10,10,10,.98);
+    border-bottom:1px solid var(--line);
+    flex-direction:column;
+    padding:1.5rem;
+    gap:1.2rem;
+    align-items:flex-start;
+  }
+  .nav-links.open{display:flex}
+  .feat-grid, .testi-grid, .foot-grid, .radios{
+    grid-template-columns:1fr;
+  }
+  .result-grid{grid-template-columns:1fr}
+  .macro-row{flex-direction:column; align-items:stretch; gap:.5rem}
+  .macro-lbl{width:auto}
+  .tl{flex-direction:column; gap:1.2rem; align-items:center}
+  .tl::before, .tl-prog{display:none}
+  .tl-point{flex-direction:row; width:100%; justify-content:flex-start; gap:1rem}
+  .tl-lbl{text-align:left}
+  .sim-box{padding:1.6rem}
+  .sec-head h2, .cta-final h2{font-size:1.9rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important; transition:none!important; scroll-behavior:auto!important}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ═══════ BANNER DEMO ═══════ -->
+<div class="demo-banner" id="demoBanner">
+  <strong>Demo</strong>
+  <span>Dados e imagens fictícios</span>
+  <span class="keep">·</span>
+  <a href="../projetos/landing-nutricao.html">Ver case completo</a>
+  <button type="button" aria-label="Fechar aviso" onclick="fecharBanner()">✕</button>
+</div>
+
+<!-- ═══════ HEADER ═══════ -->
+<header id="top">
+  <nav>
+    <a href="#inicio" class="logo" aria-label="Início">
+      <div class="logo-mark">H</div>
+      <div class="logo-text">
+        <span class="logo-name">HELENA MARQUES</span>
+        <span class="logo-title">Nutricionista</span>
+      </div>
+    </a>
+
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="menu">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#simulador">Simulador</a></li>
+      <li><a href="#como-funciona">Método</a></li>
+      <li><a href="#transformacoes">Resultados</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#simulador" class="btn-nav">Quero começar</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero" id="inicio">
+  <div class="hero-container">
+    <div>
+      <span class="hero-badge">
+        <i class="fas fa-crown"></i>
+        Nutricionista em Brasília-DF
+      </span>
+      <h1>Transforme seu corpo com <em>nutrição de alto padrão</em></h1>
+      <p class="lead">
+        Planos alimentares 100% personalizados baseados na ciência.
+        Atendimento online e presencial. Sem dietas malucas, apenas
+        resultados reais.
+      </p>
+
+      <div class="hero-stats">
+        <div class="hero-stat"><b>+500</b><span>Pacientes atendidos</span></div>
+        <div class="hero-stat"><b>4.9★</b><span>Avaliação média</span></div>
+        <div class="hero-stat"><b>8+</b><span>Anos de experiência</span></div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#simulador" class="btn btn-gold">
+          <i class="fas fa-calculator"></i>
+          Simular meu plano
+        </a>
+        <a href="#" class="btn btn-outline" data-demo-wa>
+          <i class="fab fa-whatsapp"></i>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="ph-hero">
+        <i class="fas fa-user-nurse"></i>
+        <span>Foto profissional</span>
+        <small>placeholder · dados fictícios</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ SIMULADOR ═══════ -->
+<section class="sim-sec" id="simulador">
+  <div class="sim-wrap">
+    <div class="sec-head">
+      <h2>Simulador de <em>plano nutricional</em></h2>
+      <p>Descubra em segundos quantas calorias seu corpo precisa e qual a distribuição ideal de macronutrientes para o seu objetivo</p>
+    </div>
+
+    <div class="sim-box">
+
+      <div class="steps">
+        <div class="step on" data-step="1"><b>1</b><span>Dados</span></div>
+        <div class="step" data-step="2"><b>2</b><span>Objetivo</span></div>
+        <div class="step" data-step="3"><b>3</b><span>Resultado</span></div>
+      </div>
+
+      <form class="sim-form" id="form">
+        <div class="row">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Como posso te chamar?" required>
+          </div>
+          <div class="field">
+            <label for="fone">WhatsApp</label>
+            <input type="tel" id="fone" placeholder="(61) 99999-9999" maxlength="15" required>
+          </div>
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" placeholder="Ex: 30" min="15" max="90" required>
+          </div>
+          <div class="field">
+            <label for="peso">Peso (kg)</label>
+            <input type="number" id="peso" placeholder="Ex: 70" step="0.1" min="30" max="250" required>
+          </div>
+          <div class="field">
+            <label for="altura">Altura (cm)</label>
+            <input type="number" id="altura" placeholder="Ex: 170" min="120" max="230" required>
+          </div>
+        </div>
+
+        <div class="field full">
+          <label>Sexo biológico</label>
+          <div class="radios">
+            <div class="radio">
+              <input type="radio" name="sexo" id="f" value="F" required>
+              <label for="f">
+                <i class="fas fa-venus"></i>
+                <b>Feminino</b>
+              </label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="sexo" id="m" value="M" required>
+              <label for="m">
+                <i class="fas fa-mars"></i>
+                <b>Masculino</b>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field full">
+          <label>Nível de atividade física</label>
+          <div class="radios">
+            <div class="radio">
+              <input type="radio" name="ativ" id="a1" value="1.2" required>
+              <label for="a1">
+                <i class="fas fa-couch"></i>
+                <b>Sedentário</b>
+                <small>Pouco ou nenhum exercício</small>
+              </label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="ativ" id="a2" value="1.375" required>
+              <label for="a2">
+                <i class="fas fa-walking"></i>
+                <b>Leve</b>
+                <small>1–3x por semana</small>
+              </label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="ativ" id="a3" value="1.55" required>
+              <label for="a3">
+                <i class="fas fa-running"></i>
+                <b>Moderado</b>
+                <small>3–5x por semana</small>
+              </label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="ativ" id="a4" value="1.725" required>
+              <label for="a4">
+                <i class="fas fa-dumbbell"></i>
+                <b>Intenso</b>
+                <small>6–7x por semana</small>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="field full">
+          <label>Seu objetivo principal</label>
+          <div class="radios">
+            <div class="radio">
+              <input type="radio" name="obj" id="o1" value="emagrecer" required>
+              <label for="o1">
+                <i class="fas fa-weight"></i>
+                <b>Emagrecer</b>
+                <small>Déficit calórico</small>
+              </label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="obj" id="o2" value="manter" required>
+              <label for="o2">
+                <i class="fas fa-balance-scale"></i>
+                <b>Manter peso</b>
+                <small>Equilíbrio</small>
+              </label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="obj" id="o3" value="ganhar" required>
+              <label for="o3">
+                <i class="fas fa-dumbbell"></i>
+                <b>Ganhar massa</b>
+                <small>Superávit calórico</small>
+              </label>
+            </div>
+            <div class="radio">
+              <input type="radio" name="obj" id="o4" value="saude" required>
+              <label for="o4">
+                <i class="fas fa-heartbeat"></i>
+                <b>Saúde geral</b>
+                <small>Qualidade de vida</small>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-sim" id="btnSim">
+          <i class="fas fa-magic"></i>
+          Calcular meu plano ideal
+        </button>
+      </form>
+
+      <!-- RESULTADO -->
+      <div class="sim-result" id="result">
+        <div class="result-grid">
+          <div class="result">
+            <i class="fas fa-fire-alt"></i>
+            <b id="vTmb">—</b>
+            <span>Calorias/dia (TMB)</span>
+          </div>
+          <div class="result hl">
+            <i class="fas fa-bullseye"></i>
+            <b id="vMeta">—</b>
+            <span>Meta calórica</span>
+          </div>
+          <div class="result">
+            <i class="fas fa-tint"></i>
+            <b id="vAgua">—</b>
+            <span>Água recomendada</span>
+          </div>
+        </div>
+
+        <div class="macros">
+          <h4>Distribuição de macronutrientes</h4>
+          <div class="macro-row">
+            <div class="macro-lbl">Proteínas</div>
+            <div class="macro-bar">
+              <div class="macro-fill p" id="bProt">30%</div>
+            </div>
+          </div>
+          <div class="macro-row">
+            <div class="macro-lbl">Carboidratos</div>
+            <div class="macro-bar">
+              <div class="macro-fill c" id="bCarb">40%</div>
+            </div>
+          </div>
+          <div class="macro-row">
+            <div class="macro-lbl">Gorduras</div>
+            <div class="macro-bar">
+              <div class="macro-fill f" id="bGord">30%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-box">
+          <h4>Projeção de resultados</h4>
+          <div class="tl">
+            <div class="tl-prog" id="tlProg"></div>
+            <div class="tl-point on">
+              <div class="tl-dot">1</div>
+              <div class="tl-lbl">Semana 1<br>Adaptação</div>
+            </div>
+            <div class="tl-point">
+              <div class="tl-dot">2</div>
+              <div class="tl-lbl">Mês 1<br>Primeiros resultados</div>
+            </div>
+            <div class="tl-point">
+              <div class="tl-dot">3</div>
+              <div class="tl-lbl">Mês 3<br>Transformação</div>
+            </div>
+            <div class="tl-point">
+              <div class="tl-dot">4</div>
+              <div class="tl-lbl">Mês 6<br>Novo hábito</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-result">
+          <a href="#" class="btn-cta" id="btnWa">
+            <i class="fab fa-whatsapp"></i>
+            Receber plano completo no WhatsApp
+          </a>
+          <p class="cta-note">
+            <i class="fas fa-lock"></i>
+            Seus dados estão seguros. Resposta em até 2h.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ COMO FUNCIONA ═══════ -->
+<section class="features" id="como-funciona">
+  <div class="sec-head">
+    <h2>Como funciona o <em>acompanhamento</em></h2>
+    <p>Um método científico e humanizado para transformar sua relação com a alimentação</p>
+  </div>
+
+  <div class="feat-grid">
+    <article class="feat">
+      <i class="fas fa-clipboard-check"></i>
+      <h3>Avaliação completa</h3>
+      <p>Análise detalhada do seu histórico alimentar, rotina, preferências e objetivos. Entendemos você antes de criar o plano.</p>
+    </article>
+    <article class="feat">
+      <i class="fas fa-utensils"></i>
+      <h3>Plano personalizado</h3>
+      <p>Cardápios variados e flexíveis, adaptados ao seu metabolismo e estilo de vida. Comidas que você gosta, na medida certa.</p>
+    </article>
+    <article class="feat">
+      <i class="fas fa-mobile-alt"></i>
+      <h3>Acompanhamento real</h3>
+      <p>Suporte direto via WhatsApp para tirar dúvidas, ajustar o plano e manter a motivação. Você nunca estará sozinho.</p>
+    </article>
+    <article class="feat">
+      <i class="fas fa-chart-line"></i>
+      <h3>Monitoramento</h3>
+      <p>Acompanhamento semanal de peso, medidas e fotos para ajustar o plano conforme sua evolução.</p>
+    </article>
+    <article class="feat">
+      <i class="fas fa-sync-alt"></i>
+      <h3>Ajustes constantes</h3>
+      <p>O plano muda conforme seu corpo muda. Modificações sempre que necessário para manter os resultados.</p>
+    </article>
+    <article class="feat">
+      <i class="fas fa-graduation-cap"></i>
+      <h3>Educação alimentar</h3>
+      <p>Aprenda a fazer escolhas inteligentes para manter o peso para sempre, sem depender de dietas restritivas.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ═══════ TRANSFORMAÇÕES ═══════ -->
+<section class="transf" id="transformacoes">
+  <div class="sec-head">
+    <h2>Transformações <em>reais</em></h2>
+    <p>Resultados comprovados de pacientes que confiaram no método</p>
+  </div>
+
+  <div class="transf-grid">
+    <div class="transf-card">
+      <div class="transf-ph">
+        <div class="half before"><i class="fas fa-user"></i><span>Antes</span></div>
+        <div class="half after"><i class="fas fa-user-check"></i><span>Depois</span></div>
+      </div>
+      <div class="transf-body">
+        <h4>Transformação completa</h4>
+        <p>Paciente que seguiu o plano de emagrecimento com acompanhamento nutricional especializado.</p>
+        <div class="transf-result">
+          <i class="fas fa-arrow-down"></i>
+          Resultado em 6 meses
+        </div>
+      </div>
+    </div>
+
+    <div class="transf-card">
+      <div class="transf-ph">
+        <div class="half before"><i class="fas fa-user"></i><span>Antes</span></div>
+        <div class="half after"><i class="fas fa-dumbbell"></i><span>Depois</span></div>
+      </div>
+      <div class="transf-body">
+        <h4>Definição muscular</h4>
+        <p>Resultado de paciente que buscou ganho de massa magra com reeducação alimentar.</p>
+        <div class="transf-result">
+          <i class="fas fa-arrow-up"></i>
+          Resultado em 4 meses
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ DEPOIMENTOS ═══════ -->
+<section class="testi">
+  <div class="sec-head">
+    <h2>O que dizem os <em>pacientes</em></h2>
+    <p>Depoimentos de quem transformou sua saúde e autoestima</p>
+  </div>
+
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-head">
+        <div class="testi-avatar">MA</div>
+        <div class="testi-info">
+          <h4>Maria A.</h4>
+          <span>34 anos, Brasília-DF</span>
+        </div>
+      </div>
+      <p class="testi-text">
+        "A Dra. Helena mudou minha relação com a comida. Em 4 meses perdi
+        12 kg sem passar fome. O melhor é que aprendi a comer e não engordei
+        mais nada desde então!"
+      </p>
+      <div class="testi-result">
+        <i class="fas fa-arrow-down"></i>
+        −12 kg em 4 meses
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-head">
+        <div class="testi-avatar">CS</div>
+        <div class="testi-info">
+          <h4>Carlos S.</h4>
+          <span>28 anos, Brasília-DF</span>
+        </div>
+      </div>
+      <p class="testi-text">
+        "Como atleta, precisava de algo específico. Ganhei 8 kg de massa magra
+        em 6 meses e minha performance melhorou demais. O acompanhamento online
+        é perfeito."
+      </p>
+      <div class="testi-result">
+        <i class="fas fa-arrow-up"></i>
+        +8 kg de massa magra
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <div class="testi-head">
+        <div class="testi-avatar">FO</div>
+        <div class="testi-info">
+          <h4>Fernanda O.</h4>
+          <span>42 anos, Brasília-DF</span>
+        </div>
+      </div>
+      <p class="testi-text">
+        "Depois da menopausa engordei 15 kg e nada funcionava. Com o plano da
+        Dra. Helena, perdi tudo em 5 meses e ainda melhorei meu colesterol."
+      </p>
+      <div class="testi-result">
+        <i class="fas fa-heart"></i>
+        −15 kg e saúde renovada
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ FAQ ═══════ -->
+<section class="faq" id="faq">
+  <div class="sec-head">
+    <h2>Perguntas <em>frequentes</em></h2>
+    <p>Tudo que você precisa saber antes de começar sua transformação</p>
+  </div>
+
+  <div class="faq-wrap">
+    <div class="faq-item on">
+      <button class="faq-q" type="button">
+        <span>O plano nutricional é realmente personalizado?</span>
+        <span class="faq-ic"><i class="fas fa-chevron-down"></i></span>
+      </button>
+      <div class="faq-a"><p>Sim! Cada plano é criado do zero baseado na sua avaliação completa. Consideramos seu metabolismo, rotina, preferências alimentares, restrições e objetivos.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">
+        <span>Atendimento é online ou presencial?</span>
+        <span class="faq-ic"><i class="fas fa-chevron-down"></i></span>
+      </button>
+      <div class="faq-a"><p>Os dois! Atendo presencialmente em Brasília-DF e também ofereço acompanhamento online para todo o Brasil.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">
+        <span>Vou passar fome?</span>
+        <span class="faq-ic"><i class="fas fa-chevron-down"></i></span>
+      </button>
+      <div class="faq-a"><p>De forma alguma! Os planos são baseados em alimentos saciantes e nutritivos. Você vai comer bem e perder peso ao mesmo tempo.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">
+        <span>Quanto tempo até ver resultados?</span>
+        <span class="faq-ic"><i class="fas fa-chevron-down"></i></span>
+      </button>
+      <div class="faq-a"><p>A maioria dos pacientes sente mais disposição nas primeiras semanas. Resultados visíveis de peso/medidas geralmente aparecem entre 15–30 dias.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">
+        <span>Qual o investimento?</span>
+        <span class="faq-ic"><i class="fas fa-chevron-down"></i></span>
+      </button>
+      <div class="faq-a"><p>Planos a partir de R$ 297/mês. O valor varia conforme a frequência de acompanhamento desejada.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" type="button">
+        <span>Preciso fazer exercícios?</span>
+        <span class="faq-ic"><i class="fas fa-chevron-down"></i></span>
+      </button>
+      <div class="faq-a"><p>Não é obrigatório, mas recomendo. Se você não pratica, criamos um plano alimentar que funciona sozinho.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CTA FINAL ═══════ -->
+<section class="cta-final">
+  <h2>Pronto para sua <em>transformação?</em></h2>
+  <p>Atendimento personalizado com foco total em cada paciente.</p>
+  <a href="#simulador" class="btn-cta">
+    <i class="fas fa-rocket"></i>
+    Quero meu plano personalizado
+  </a>
+</section>
+
+</main>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-brand">
+      <div style="display:flex;align-items:center;gap:1rem">
+        <div class="logo-mark">H</div>
+        <div class="logo-text">
+          <span class="logo-name" style="font-size:.9rem">HELENA MARQUES</span>
+          <span class="logo-title" style="font-size:.55rem">Nutricionista</span>
+        </div>
+      </div>
+      <p>Transformando vidas através da nutrição inteligente e personalizada. Mais de 500 pacientes atendidos em Brasília-DF e todo Brasil.</p>
+      <div class="socials">
+        <a href="#" data-demo-wa aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" data-demo-wa aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" data-demo-wa aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+
+    <div class="foot-col">
+      <h4>Links rápidos</h4>
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#simulador">Simulador</a></li>
+        <li><a href="#como-funciona">Método</a></li>
+        <li><a href="#transformacoes">Resultados</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#" data-demo-wa>Consultoria online</a></li>
+        <li><a href="#" data-demo-wa>Consultoria presencial</a></li>
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="#" data-demo-wa>contato@exemplo.demo</a></li>
+        <li><a href="#" data-demo-wa>(61) 90000-0000</a></li>
+        <li>Brasília-DF</li>
+        <li>Atendimento online Brasil</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot-bottom">
+    <p>© 2026 Dra. Helena Marques (personagem fictícia). Todos os direitos reservados. | CRN-1 00000</p>
+    <p style="margin-top:.6rem">
+      Landing page de demonstração · Código por <a href="../index.html">JOVEMODERNO</a>
+    </p>
+  </div>
+</footer>
+
+<div class="toast-wrap" id="toasts" aria-live="polite"></div>
+
+<script>
+/* =========================================================
+   JOVEMODERNO · Demo da Landing de Nutrição
+   ========================================================= */
+
+/* ---------- Toast ---------- */
+function toast(msg, ms = 3200){
+  const wrap = document.getElementById('toasts');
+  const el = document.createElement('div');
+  el.className = 'toast';
+  el.innerHTML = `<i class="fas fa-circle-info"></i><span>${msg}</span>`;
+  wrap.appendChild(el);
+  setTimeout(() => {
+    el.style.transition = 'opacity .3s, transform .3s';
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    setTimeout(() => el.remove(), 320);
+  }, ms);
+}
+
+/* ---------- Demo WhatsApp ---------- */
+document.querySelectorAll('[data-demo-wa]').forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    toast('Esta é uma demonstração — o WhatsApp real não está ativo.');
+  });
+});
+
+/* ---------- Fechar banner ---------- */
+function fecharBanner(){
+  const b = document.getElementById('demoBanner');
+  b.style.display = 'none';
+  document.documentElement.style.setProperty('--demo-h', '0px');
+  try { sessionStorage.setItem('demoBannerClosed', '1'); } catch(_){}
+}
+try {
+  if (sessionStorage.getItem('demoBannerClosed') === '1') fecharBanner();
+} catch(_){}
+
+/* ---------- Header scrolled ---------- */
+const header = document.querySelector('header');
+let rafId = false;
+function onScroll(){
+  if (rafId) return;
+  rafId = true;
+  requestAnimationFrame(() => {
+    header.classList.toggle('scrolled', window.scrollY > 20);
+    rafId = false;
+  });
+}
+onScroll();
+window.addEventListener('scroll', onScroll, {passive:true});
+
+/* ---------- Menu mobile ---------- */
+const burger = document.querySelector('.burger');
+const menu = document.getElementById('menu');
+if (burger && menu){
+  burger.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', String(open));
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  }));
+}
+
+/* ---------- Máscara de telefone ---------- */
+const fone = document.getElementById('fone');
+if (fone){
+  fone.addEventListener('input', (e) => {
+    let v = e.target.value.replace(/\D/g, '').slice(0, 11);
+    if (v.length > 10) v = v.replace(/^(\d{2})(\d{5})(\d{0,4}).*/, '($1) $2-$3');
+    else if (v.length > 6) v = v.replace(/^(\d{2})(\d{4})(\d{0,4}).*/, '($1) $2-$3');
+    else if (v.length > 2) v = v.replace(/^(\d{2})(\d{0,5}).*/, '($1) $2');
+    else if (v.length > 0) v = v.replace(/^(\d{0,2}).*/, '($1');
+    e.target.value = v;
+  });
+}
+
+/* ---------- FAQ ---------- */
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const isOpen = item.classList.contains('on');
+    document.querySelectorAll('.faq-item').forEach(f => f.classList.remove('on'));
+    if (!isOpen) item.classList.add('on');
+  });
+});
+
+/* ---------- Simulador ---------- */
+const form = document.getElementById('form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const btn = document.getElementById('btnSim');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Calculando...';
+
+  const nome   = document.getElementById('nome').value.trim();
+  const idade  = +document.getElementById('idade').value;
+  const peso   = +document.getElementById('peso').value;
+  const altura = +document.getElementById('altura').value;
+  const sexo   = document.querySelector('input[name="sexo"]:checked').value;
+  const ativ   = +document.querySelector('input[name="ativ"]:checked').value;
+  const obj    = document.querySelector('input[name="obj"]:checked').value;
+
+  /* TMB — Mifflin-St Jeor */
+  const tmb = sexo === 'M'
+    ? (10 * peso) + (6.25 * altura) - (5 * idade) + 5
+    : (10 * peso) + (6.25 * altura) - (5 * idade) - 161;
+
+  const get = Math.round(tmb * ativ);
+
+  let meta, p, c, g;
+  switch(obj){
+    case 'emagrecer': meta = get - 500; p = 40; c = 30; g = 30; break;
+    case 'ganhar':    meta = get + 300; p = 35; c = 45; g = 20; break;
+    case 'manter':    meta = get;       p = 30; c = 40; g = 30; break;
+    case 'saude':     meta = get;       p = 25; c = 45; g = 30; break;
+  }
+
+  const agua = (peso * 35 / 1000).toFixed(1);
+
+  /* Simula delay */
+  setTimeout(() => {
+    document.getElementById('vTmb').textContent  = Math.round(tmb).toLocaleString('pt-BR');
+    document.getElementById('vMeta').textContent = meta.toLocaleString('pt-BR');
+    document.getElementById('vAgua').textContent = agua + 'L';
+
+    document.getElementById('result').classList.add('show');
+
+    /* Anima barras */
+    setTimeout(() => {
+      const setBar = (id, val) => {
+        const el = document.getElementById(id);
+        el.style.width = val + '%';
+        el.textContent = val + '%';
+      };
+      setBar('bProt', p);
+      setBar('bCarb', c);
+      setBar('bGord', g);
+    }, 250);
+
+    /* Timeline */
+    setTimeout(() => {
+      document.getElementById('tlProg').style.width = '90%';
+      document.querySelectorAll('.tl-point').forEach((pt, i) => {
+        setTimeout(() => pt.classList.add('on'), i * 220);
+      });
+    }, 500);
+
+    /* Steps */
+    document.querySelectorAll('.step').forEach((s, i) => {
+      if (i < 2) s.classList.add('on');
+    });
+
+    /* Scroll */
+    document.getElementById('result').scrollIntoView({behavior:'smooth', block:'start'});
+
+    /* Botão volta */
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fas fa-redo"></i> Recalcular';
+
+    /* CTA WhatsApp carrega contexto */
+    const btnWa = document.getElementById('btnWa');
+    const objTxt = {emagrecer:'emagrecer', manter:'manter o peso', ganhar:'ganhar massa muscular', saude:'saúde geral'}[obj];
+
+    btnWa.onclick = (ev) => {
+      ev.preventDefault();
+      toast(`Demo — no site real, o WhatsApp abriria com: "${nome}, objetivo: ${objTxt}, meta ${meta} kcal/dia"`);
+    };
+
+  }, 1200);
+});
+
+/* ---------- Smooth scroll para links internos ---------- */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const id = a.getAttribute('href');
+    if (id === '#' || id.length < 2) return;
+    const target = document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>

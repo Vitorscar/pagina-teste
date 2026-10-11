@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestão de Paradas — Case | JOVEMODERNO</title>
+<meta name="description" content="PWA mobile-first para registro, atendimento e análise de paradas industriais: QR Code, áudio, vídeo, ditado por voz, OS e indicadores. Zero frameworks, arquitetura modular.">
+<meta name="theme-color" content="#050608">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://jovemoderno.com/projetos/gestao-de-paradas.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gestão de Paradas — Case JOVEMODERNO">
+<meta property="og:description" content="PWA modular para manutenção industrial: registro em campo, captura de mídia e indicadores gerenciais.">
+<meta property="og:image" content="../assets/og-gestao-paradas.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/icone.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo" href="../index.html" aria-label="JOVEMODERNO — início">
+      <img src="../assets/logo.png" alt="JOVEMODERNO Technology Company">
+    </a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+      <span></span><span></span><span></span>
+    </button>
+    <nav aria-label="Principal">
+      <ul id="menu-principal">
+        <li><a href="../index.html#servicos">Serviços</a></li>
+        <li><a href="../index.html#projetos">Projetos</a></li>
+        <li><a href="../index.html#sobre">Sobre</a></li>
+        <li><a class="btn btn-primary" data-wa href="#">Solicitar orçamento</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="proj-hero">
+    <div class="wrap">
+      <a class="back" href="../index.html#projetos">← Voltar para projetos</a>
+      <span class="badge">Projeto desenvolvido</span>
+      <h1>Gestão de Paradas</h1>
+      <p>
+        PWA mobile-first para registrar, atender e analisar paradas industriais.
+        Cobre o ciclo completo — do QR colado na máquina até o indicador no
+        relatório — com captura de <strong>foto, vídeo e áudio</strong> direto no
+        navegador, ditado por voz e leitura de QR sem sair do app.
+      </p>
+
+      <ul class="chips" aria-label="Destaques técnicos">
+        <li class="chip">PWA offline-first</li>
+        <li class="chip">QR Code via câmera</li>
+        <li class="chip">Áudio + voz in-browser</li>
+        <li class="chip">SPA sem framework</li>
+        <li class="chip">Arquitetura modular</li>
+      </ul>
+
+      <div class="cta-row" style="margin-top:32px">
+        <a class="btn btn-ghost" href="#como-funciona">Ver como funciona</a>
+        <a class="btn btn-primary" data-wa
+           data-wa="Olá! Vi o case da Gestão de Paradas e quero conversar sobre um sistema parecido.">
+          Conversar sobre um sistema
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ VISÃO GERAL ═══════════ -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="about">
+        <div>
+          <span class="eyebrow">Visão geral</span>
+          <h2>Um problema simples, resolvido com profundidade.</h2>
+          <p>
+            Quando uma máquina para, o time precisa responder rápido:
+            <em>o que parou, quando, por quê, quem atende, quanto custou em tempo?</em>
+            Papel não sobrevive ao turno. Planilha vira ilha. Indicador chega tarde.
+          </p>
+          <p>
+            Este sistema centraliza o fluxo inteiro em uma interface que funciona
+            <strong>na mão do técnico em campo</strong> — com registro offline,
+            anexos capturados na hora e sincronização quando volta o sinal.
+          </p>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi">
+            <b>5</b>
+            <span>views funcionais</span>
+          </div>
+          <div class="kpi">
+            <b>8</b>
+            <span>services de domínio</span>
+          </div>
+          <div class="kpi">
+            <b>~15</b>
+            <span>módulos CSS</span>
+          </div>
+          <div class="kpi">
+            <b>3</b>
+            <span>tipos de mídia in-browser</span>
+          </div>
+          <div class="kpi">
+            <b>0</b>
+            <span>frameworks de front-end</span>
+          </div>
+          <div class="kpi">
+            <b>1</b>
+            <span>lib externa (jsQR)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FLUXO ═══════════ -->
+  <section id="como-funciona">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Como funciona</h2>
+        <p>Do apontamento no chão de fábrica ao indicador do mês.</p>
+      </div>
+
+      <ol class="timeline">
+        <li>
+          <span class="tl-num">1</span>
+          <div>
+            <h3>Identificação por chapa</h3>
+            <p>Técnico digita a chapa. O sistema consulta o cadastro e preenche automaticamente <strong>nome, cargo e gestor</strong> — evitando digitação redundante em campo.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tl-num">2</span>
+          <div>
+            <h3>Setor → Máquina em cascata</h3>
+            <p>Escolher o setor filtra as máquinas disponíveis. No salvar, há <em>validação cruzada</em>: se a máquina não pertence ao setor informado, o registro é bloqueado com mensagem clara.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tl-num">3</span>
+          <div>
+            <h3>Classificação estruturada</h3>
+            <p>Tipo de falha, causa-raiz e componente saem de listas controladas — com <code>&lt;datalist&gt;</code> de sugestões. Nada de campo livre que vira bagunça no relatório.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tl-num">4</span>
+          <div>
+            <h3>Ação no componente + preventiva</h3>
+            <p>Chips clicáveis categorizam o que foi feito na hora e o que fica como <em>ação preventiva</em>. Vira dado estruturado para o Pareto, não texto solto.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tl-num">5</span>
+          <div>
+            <h3>Anexos na hora da ocorrência</h3>
+            <p>Foto via câmera, vídeo curto (limite de 20 MB) e áudio de até 60 s — todos capturados no próprio navegador com <code>MediaRecorder</code> e enviados com barra de progresso.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tl-num">6</span>
+          <div>
+            <h3>Fechamento e status</h3>
+            <p>Status (<em>já encerrada</em> ou <em>em andamento</em>) + tempo total em formato livre (<code>45min</code>, <code>1h30</code>, <code>2h</code>). Observação aceita <strong>ditado por voz</strong> via <code>SpeechRecognition</code>.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ═══════════ MOCKUPS ═══════════ -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Como aparece na prática</h2>
+        <p>Reproduções da interface com <strong>dados fictícios</strong>. Nomes, códigos e horários foram alterados por confidencialidade.</p>
+      </div>
+
+      <div class="screens">
+
+        <!-- Radar mobile -->
+        <div class="screen screen-mobile">
+          <div class="screen-bar">
+            <i></i><i></i><i></i>
+            <b>Radar do turno</b>
+          </div>
+          <div class="screen-body">
+            <div class="mock-radar-title">🟥 PARADAS AGORA <span>3</span></div>
+            <div class="mock-radar-item crit">
+              <span class="dot"></span><b>Prensa 12</b><em>42 min</em>
+            </div>
+            <div class="mock-radar-item amber">
+              <span class="dot"></span><b>Injetora 02</b><em>18 min</em>
+            </div>
+            <div class="mock-radar-item sun">
+              <span class="dot"></span><b>Esteira 07</b><em>Em atendimento</em>
+            </div>
+            <div class="mock-radar-footer">
+              <span class="rf-btn">📡</span>
+              <span class="rf-btn rf-main">🚨 REGISTRAR</span>
+              <span class="rf-btn">🚪</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lista de máquinas -->
+        <div class="screen">
+          <div class="screen-bar">
+            <i></i><i></i><i></i>
+            <b>Máquinas · 12</b>
+          </div>
+          <div class="screen-body">
+            <div class="mock-setor">USINAGEM <span class="mock-count">7</span></div>
+            <div class="mock-maq is-parada">
+              <div class="mock-maq-top">
+                <span class="mock-maq-nome">Prensa 12</span>
+                <span class="mock-badge parada">PARADA</span>
+              </div>
+              <div class="mock-maq-meta">P1 · MQ-PRENSA-12</div>
+              <div class="mock-maq-parada">⏱ Parada há <b>42 min</b></div>
+            </div>
+            <div class="mock-maq is-operando">
+              <div class="mock-maq-top">
+                <span class="mock-maq-nome">Torno CNC 03</span>
+                <span class="mock-badge ok">OPERANDO</span>
+              </div>
+              <div class="mock-maq-meta">P2 · MQ-TORNO-03</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulário de registro (novo) -->
+        <div class="screen">
+          <div class="screen-bar">
+            <i></i><i></i><i></i>
+            <b>Registrar parada</b>
+          </div>
+          <div class="screen-body">
+            <div class="mock-form-head">
+              <span class="mock-form-dot"></span>
+              <b>Identificação</b>
+            </div>
+            <div class="mock-form-row3">
+              <span>12/10/2026</span>
+              <span>Turno A</span>
+              <span>Impacto: Alto</span>
+            </div>
+            <div class="mock-form-chapa">
+              <span class="lbl">CHAPA</span>
+              <span class="val">0001234567</span>
+              <span class="ok">✓</span>
+            </div>
+            <div class="mock-form-info">
+              <div><span>Nome:</span><b>Téc. Silva</b></div>
+              <div><span>Cargo:</span><b>Mecânico</b></div>
+            </div>
+
+            <div class="mock-form-head mock-form-head--sun">
+              <span class="mock-form-dot mock-form-dot--sun"></span>
+              <b>Localização</b>
+            </div>
+            <div class="mock-form-row2">
+              <span>Usinagem ▾</span>
+              <span>Prensa 12 ▾</span>
+            </div>
+
+            <div class="mock-form-media">
+              <span class="media-btn">📷 Foto</span>
+              <span class="media-btn">🎤 Áudio</span>
+              <span class="media-btn">🎥 Vídeo</span>
+            </div>
+
+            <div class="mock-form-status">
+              <span class="st on">✅ Já encerrada</span>
+              <span class="st">🟡 Em andamento</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="note" style="margin-top:32px">
+        <strong>Nota de confidencialidade.</strong> Por acordo com o cliente,
+        nenhuma tela de produção é exibida. Os mockups acima reproduzem o
+        comportamento real da interface com dados fictícios.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════ DECISÕES TÉCNICAS ═══════════ -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Decisões técnicas que valem a pena</h2>
+        <p>Seis pontos do sistema que mostram maturidade de produto, não só de tela.</p>
+      </div>
+
+      <div class="grid2">
+        <article class="decision">
+          <span class="decision-tag">PWA</span>
+          <h3>Instalável e pensado para offline</h3>
+          <p>
+            O app tem <code>manifest.webmanifest</code> e <code>sw.js</code>.
+            Cache de assets, tema próprio e lançamento pela tela inicial do
+            celular — sem app store, sem download, sem fricção pro operador.
+          </p>
+        </article>
+
+        <article class="decision">
+          <span class="decision-tag">UX</span>
+          <h3>Chapa vira identidade, não digitação</h3>
+          <p>
+            Com 10 dígitos, o sistema busca o técnico em <code>state.db.tecnicos</code>
+            e preenche <em>nome, cargo e gestor</em> automaticamente. Se a chapa
+            não bate com ninguém, avisa. Se bate com o <code>currentUser</code>,
+            usa o próprio usuário como fallback — sem travar o fluxo em campo.
+          </p>
+        </article>
+
+        <article class="decision">
+          <span class="decision-tag">Integridade</span>
+          <h3>Validação cruzada no salvar</h3>
+          <p>
+            A cascata filtra no <em>select</em>, mas o salvar revalida: se a
+            máquina não pertence ao setor escolhido, o registro é bloqueado
+            com mensagem explícita. Nada de dado inconsistente entrar no banco
+            por causa de estado velho em memória.
+          </p>
+        </article>
+
+        <article class="decision">
+          <span class="decision-tag">Mídia in-browser</span>
+          <h3>Foto, vídeo e áudio sem backend dedicado</h3>
+          <p>
+            Câmera via <code>capture="environment"</code>, vídeo com limite de
+            20 MB, e áudio gravado com <strong>MediaRecorder</strong> — 60 s
+            máx, com contador ao vivo e preview. Upload feito em paralelo com
+            contador <em>“enviando 2 de 5…”</em>.
+          </p>
+        </article>
+
+        <article class="decision">
+          <span class="decision-tag">Voz</span>
+          <h3>Ditado por voz na observação</h3>
+          <p>
+            O campo de observação tem botão de microfone que usa
+            <code>SpeechRecognition</code>. Em ambiente industrial, técnico de
+            luva agradece: descreve a ocorrência falando, não digitando.
+          </p>
+        </article>
+
+        <article class="decision">
+          <span class="decision-tag">Arquitetura</span>
+          <h3>Adapter de persistência trocável</h3>
+          <p>
+            Toda leitura/escrita passa por <code>data/api.js</code>. Hoje ele
+            persiste em <code>localStorage</code> — amanhã vira Supabase ou
+            qualquer outro back-end sem tocar em service ou view. Zero
+            acoplamento com o storage.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ARQUITETURA ═══════════ -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Arquitetura</h2>
+        <p>Cada pasta com uma responsabilidade. Fácil de achar as coisas quando o sistema cresce.</p>
+      </div>
+
+      <div class="arch">
+        <div class="arch-col">
+          <h4>core/</h4>
+          <ul>
+            <li>state.js</li>
+            <li>router.js</li>
+            <li>storage.js</li>
+            <li>events.js</li>
+            <li>utils.js</li>
+          </ul>
+        </div>
+        <div class="arch-col">
+          <h4>data/</h4>
+          <ul>
+            <li>api.js <em>(adapter)</em></li>
+            <li>constants.js</li>
+            <li>seed.js</li>
+          </ul>
+        </div>
+        <div class="arch-col">
+          <h4>services/</h4>
+          <ul>
+            <li>paradas.service</li>
+            <li>maquinas.service</li>
+            <li>os.service</li>
+            <li>relatorios.service</li>
+            <li>qr · audio · voz · foto</li>
+          </ul>
+        </div>
+        <div class="arch-col">
+          <h4>ui/</h4>
+          <ul>
+            <li>modal.js</li>
+            <li>toast.js</li>
+            <li>undo.js</li>
+            <li>badges.js</li>
+            <li>icons.js</li>
+          </ul>
+        </div>
+        <div class="arch-col">
+          <h4>components/</h4>
+          <ul>
+            <li>chip-status</li>
+            <li>parada-card</li>
+            <li>kanban-card</li>
+            <li>big-action-button</li>
+            <li>form-fields</li>
+          </ul>
+        </div>
+        <div class="arch-col">
+          <h4>views/</h4>
+          <ul>
+            <li>radar</li>
+            <li>registro</li>
+            <li>maquinas</li>
+            <li>os</li>
+            <li>relatorios</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ STACK ═══════════ -->
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Stack</h2>
+        <p>Ferramentas escolhidas pelo problema, não por moda.</p>
+      </div>
+
+      <ul class="stack">
+        <li><b>Front-end</b><span>HTML, CSS modular com tokens + JavaScript ES Modules</span></li>
+        <li><b>Estado</b><span>store central em <code>core/state.js</code> + <code>draft</code> isolado por formulário</span></li>
+        <li><b>Roteamento</b><span>router próprio, zero dependência</span></li>
+        <li><b>PWA</b><span><code>manifest.webmanifest</code> + <code>sw.js</code> com cache de assets</span></li>
+        <li><b>Câmera / QR</b><span><code>getUserMedia</code> + <code>jsQR</code></span></li>
+        <li><b>Áudio</b><span><code>MediaRecorder</code> + <code>Web Audio API</code> (alerta crítico)</span></li>
+        <li><b>Voz</b><span><code>SpeechRecognition</code> para ditado</span></li>
+        <li><b>Persistência</b><span>adapter em <code>data/api.js</code> — hoje <code>localStorage</code>, pronto para Supabase</span></li>
+        <li><b>Design system</b><span>tokens → base → layout → componentes → views</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════ APRENDIZADO ═══════════ -->
+  <section class="section-alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>O que ficou</h2>
+      </div>
+      <p style="color:var(--mut);max-width:680px;font-size:1.05rem">
+        Sistema que a operação usa de verdade não é o que tem mais recurso — é o
+        que sobrevive ao turno. Boa parte do tempo foi ouvindo o time de
+        manutenção pra descobrir o que era <em>essencial</em> no meio de uma
+        parada e cortando o resto. Foi assim que recursos como <strong>ditado
+        por voz</strong> e <strong>captura de áudio em 60 s</strong> entraram —
+        o técnico de luva não vai digitar uma observação longa no meio do
+        corredor. E foi assim que decisões técnicas como o adapter de
+        persistência e a validação cruzada de setor × máquina vieram: não
+        porque “é boa prática”, mas porque o problema exigia.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════ CTA ═══════════ -->
+  <section class="section-cta">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <h2>Sua operação precisa de algo assim?</h2>
+        <p>Conta o que trava hoje. A gente pensa junto no sistema — do registro ao indicador.</p>
+        <a class="btn btn-primary" data-wa
+           data-wa="Olá! Vi o case da Gestão de Paradas e quero conversar sobre um sistema para minha operação.">
+          Conversar pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <img src="../assets/logo.png" alt="JOVEMODERNO Technology Company" loading="lazy" decoding="async">
+    <span>Brasília, DF · Atendemos todo o Brasil · © <span class="year">2026</span></span>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Voltar ao topo" hidden>↑</button>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
